@@ -1,9 +1,9 @@
 {
-  "name": "jitsi-meet-electron",
-  "version": "2.0.2",
-  "description": "Electron application for Jitsi Meet",
+  "name": "wetron-meet-electron",
+  "version": "2.0.2-1",
+  "description": "Electron application for Wetron Meet",
   "main": "./build/main.js",
-  "productName": "Jitsi Meet",
+  "productName": "Wetron Meet",
   "scripts": {
     "start": "webpack --config ./webpack.main.js --mode development && concurrently \"npm:watch\" \"electron ./build/main.js\"",
     "clean": "rm -rf node_modules build dist",
@@ -16,8 +16,8 @@
     "watch": "webpack --config ./webpack.renderer.js --mode development --watch --watch-poll"
   },
   "build": {
-    "appId": "org.jitsi.jitsi-meet",
-    "productName": "Jitsi Meet",
+    "appId": "es.wetron.wetron-meet",
+    "productName": "Wetron Meet",
     "generateUpdatesFilesForAllChannels": true,
     "files": [
       "**/*",
@@ -26,15 +26,15 @@
       "!main.js"
     ],
     "mac": {
-      "artifactName": "jitsi-meet.${ext}",
+      "artifactName": "wetron-meet.${ext}",
       "category": "public.app-category.video",
       "darkModeSupport": true
     },
     "linux": {
-      "artifactName": "jitsi-meet-${arch}.${ext}",
+      "artifactName": "wetron-meet-${arch}.${ext}",
       "category": "VideoConference;AudioVideo;Audio;Video;Network",
-      "description": "Jitsi Meet Desktop App",
-      "executableName": "jitsi-meet",
+      "description": "Wetron Meet Desktop App",
+      "executableName": "wetron-meet",
       "target": [
         {
           "arch": "x64",
@@ -43,7 +43,7 @@
       ]
     },
     "win": {
-      "artifactName": "jitsi-meet.${ext}",
+      "artifactName": "wetron-meet.${ext}",
       "target": [
         {
           "arch": [
@@ -63,7 +63,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/jitsi/jitsi-meet-electron"
+    "url": "git://github.com/olivluca/jitsi-meet-electron"
   },
   "keywords": [
     "jingle",
@@ -72,7 +72,7 @@
     "electron",
     "jitsi-meet"
   ],
-  "author": "Jitsi Team <support@jitsi.org>",
+  "author": "Wetron Team <wetront@wetron.es>",
   "readmeFilename": "README.md",
   "license": "Apache-2.0",
   "dependencies": {
