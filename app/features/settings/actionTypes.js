@@ -20,16 +20,6 @@ export const SET_ALWAYS_ON_TOP_WINDOW_ENABLED
 export const SET_AUDIO_MUTED = Symbol('SET_AUDIO_MUTED');
 
 /**
- * The type of (redux) action that sets the Avatar URL.
- *
- * @type {
- *     type: SET_AVATAR_URL,
- *     avatarURL: string
- * }
- */
-export const SET_AVATAR_URL = Symbol('SET_AVATAR_URL');
-
-/**
  * The type of (redux) action that sets the email of the user.
  *
  * @type {
@@ -58,6 +48,16 @@ export const SET_NAME = Symbol('SET_NAME');
  * }
  */
 export const SET_SERVER_URL = Symbol('SET_SERVER_URL');
+
+/**
+ * The type of (redux) action that sets the Server Timeout.
+ *
+ * @type {
+ *     type: SET_SERVER_TIMEOUT,
+ *     serverTimeout: number
+ * }
+ */
+export const SET_SERVER_TIMEOUT = Symbol('SET_SERVER_TIMEOUT');
 
 /**
  * The type of (redux) action that sets Start with Video Muted.

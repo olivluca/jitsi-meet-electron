@@ -3,30 +3,14 @@
 import {
     SET_ALWAYS_ON_TOP_WINDOW_ENABLED,
     SET_AUDIO_MUTED,
-    SET_AVATAR_URL,
     SET_EMAIL,
     SET_NAME,
     SET_SERVER_URL,
+    SET_SERVER_TIMEOUT,
     SET_VIDEO_MUTED
 } from './actionTypes';
 
 import { normalizeServerURL } from '../utils';
-
-/**
- * Set Avatar URL.
- *
- * @param {string} avatarURL - Avatar URL.
- * @returns {{
- *     type: SET_AVATAR_URL,
- *     avatarURL: string
- * }}
- */
-export function setAvatarURL(avatarURL: string) {
-    return {
-        type: SET_AVATAR_URL,
-        avatarURL
-    };
-}
 
 /**
  * Set the email of the user.
@@ -73,6 +57,22 @@ export function setServerURL(serverURL: string) {
     return {
         type: SET_SERVER_URL,
         serverURL: normalizeServerURL(serverURL)
+    };
+}
+
+/**
+ * Set Server Timeout.
+ *
+ * @param {string} serverTimeout - Server Timeout.
+ * @returns {{
+ *     type: SET_SERVER_TIMEOUT,
+ *     serverTimeout: ?number
+ * }}
+ */
+export function setServerTimeout(serverTimeout: number) {
+    return {
+        type: SET_SERVER_TIMEOUT,
+        serverTimeout
     };
 }
 
